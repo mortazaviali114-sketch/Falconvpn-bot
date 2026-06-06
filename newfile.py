@@ -49,22 +49,22 @@ def menu(message):
 
         markup.add(
             types.InlineKeyboardButton(
-                "50 گیگ | 30 روز | 299,000 تومان",
-                callback_data="50"
+                "10 گیگ | 30 روز | 130,000 تومان",
+                callback_data="10"
             )
         )
 
         markup.add(
             types.InlineKeyboardButton(
-                "100 گیگ | 30 روز | 499,000 تومان",
-                callback_data="100"
+                "20 گیگ | 30 روز | 180,000 تومان",
+                callback_data="20"
             )
         )
 
         markup.add(
             types.InlineKeyboardButton(
-                "200 گیگ | 30 روز | 799,000 تومان",
-                callback_data="200"
+                "30 گیگ | 30 روز | 240,000 تومان",
+                callback_data="30"
             )
         )
 
@@ -124,9 +124,9 @@ def menu(message):
 @bot.callback_query_handler(func=lambda call: True)
 def callback(call):
 
-    prices = {"50": "299,000", "100": "499,000", "200": "799,000"}
+    prices = {"10": "130,000", "20": "180,000", "30": "240,000"}
 
-    if call.data in ["50", "100", "200"]:
+    if call.data in ["10", "20", "30"]:
 
         markup = types.InlineKeyboardMarkup(row_width=2)
         markup.add(
@@ -160,6 +160,10 @@ def callback(call):
             """✅ پرداخت شما ثبت شد
 
 📸 لطفاً رسید پرداخت را ارسال کنید.
+
+💳 شماره کارت برای واریز:
+6037-9974-3346-2919
+👤 خلیلی
 
 ⏳ پس از بررسی، سرویس شما ارسال خواهد شد.
 
